@@ -75,17 +75,23 @@ const NavBar = () => {
 
                     <NavLink className="hover:text-primary transition-colors duration-200"
                         to="/nosotros"
-                        onClick={() => setOpen(false)}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setOpen(false);
+                        }}
                     >Nosotros</NavLink>
 
                     <NavLink className="hover:text-primary transition-colors duration-200"
-                        to="/contacto"
-                        onClick={() => setOpen(false)}
-                    >Contacto</NavLink>
+                    to="/galeria"
+                    onClick={() => setOpen(false)}
+                >Galeria</NavLink>
 
                     <NavLink className="bg-primary text-light px-4 rounded-md hover:bg-primaryDark transition-colors duration-200"
                         to="/inscribirse"
-                        onClick={() => setOpen(false)}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setOpen(false);
+                        }}
                     >Inscribirse</NavLink>
 
                 </div>
