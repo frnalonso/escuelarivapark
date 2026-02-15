@@ -1,16 +1,15 @@
-import Hero from "../components/home/Hero";
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+import Hero from "../components/home/Hero"
+import AboutSection from "../components/home/AboutSection"
 
+const Home = () => {
+    return (
+        <div>
+            <Hero />
+            <AboutSection />
 
-export default function Home() {
-  return (
-    <>
-    <div className="pt-24">
-      <Hero />
-    </div>
-      <Header />
-      <Footer />
-    </>
-  );
+        </div>
+    )
 }
+
+export default Home
+

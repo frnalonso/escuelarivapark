@@ -1,61 +1,24 @@
-import { FaInstagram, FaWhatsapp, FaFacebookF } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import { Instagram, Facebook, Youtube, Mail, Phone, MapPin, Clock } from 'lucide-react';
 
-export default function Footer() {
-    return (
-        <footer className="bg-dark text-white pt-16 pb-8">
-            <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
 
-                {/* Columna 1 - Marca */}
+  return (
+    <footer className="bg-slate-950 border-t border-slate-800">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Branding */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-[#FF8C00]">Escuela Rivapark</h3>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              La mejor escuela de skateboarding de Rivadavia. Aprende, evoluciona y diviértete con nosotros.
+            </p>
+          </div>
+
+                        {/* Columna 3 - Mapa */}
                 <div>
-                    <h2 className="text-2xl font-bold text-primary mb-4">
-                        Rivapark
-                    </h2>
-                    <p className="text-gray-400">
-                        Escuela de skate para todas las edades.
-                        Aprende, mejora y disfruta del skate en un ambiente seguro y amigable.
-                    </p>
-
-                    {/* Redes */}
-                    <div className="flex gap-4 mt-6">
-                        <a
-                            href="#"
-                            className="bg-primary p-3 rounded-full hover:bg-primaryDark transition"
-                        >
-                            <FaInstagram />
-                        </a>
-
-                        <a
-                            href="#"
-                            className="bg-primary p-3 rounded-full hover:bg-primaryDark transition"
-                        >
-                            <FaFacebookF />
-                        </a>
-
-                        <a
-                            href="https://wa.me/549XXXXXXXXXX"
-                            className="bg-green-500 p-3 rounded-full hover:bg-green-600 transition"
-                        >
-                            <FaWhatsapp />
-                        </a>
-                    </div>
-                </div>
-
-                {/* Columna 2 - Contacto */}
-                <div>
-                    <h3 className="text-xl font-semibold mb-4">Contacto</h3>
-
-                    <p className="text-gray-400 mb-2">
-                        📱 WhatsApp: +54 9 XXX XXX XXXX
-                    </p>
-
-                    <p className="text-gray-400">
-                        📍 Ubicación: Rivadavia, Mendoza Argentina
-                    </p>
-                </div>
-
-                {/* Columna 3 - Mapa */}
-                <div>
-                    <h3 className="text-xl font-semibold mb-4">
+                    <h3 className="text-lg font-semibold text-white">
                         Nuestra Ubicación
                     </h3>
 
@@ -73,12 +36,56 @@ export default function Footer() {
                     </div>
 
                 </div>
-            </div>
 
-            {/* Línea inferior */}
-            <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm">
-                © {new Date().getFullYear()} Rivapark Escuela de Skateboarding. Todos los derechos reservados.
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">Contacto</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start space-x-3 text-sm">
+                <MapPin size={18} className="text-[#FF8C00] mt-0.5 flex-shrink-0" />
+                <span className="text-slate-400">José M. Estrada 525, M5577 Rivadavia</span>
+              </li>
+              <li className="flex items-center space-x-3 text-sm">
+                <Phone size={18} className="text-[#FF8C00] flex-shrink-0" />
+                <span className="text-slate-400">+34 123 456 789</span>
+              </li>
+              <li className="flex items-center space-x-3 text-sm">
+                <Mail size={18} className="text-[#FF8C00] flex-shrink-0" />
+                <span className="text-slate-400">escuelarivaparkmza@gmail.com</span>
+              </li>
+              <li className="flex items-start space-x-3 text-sm">
+                <Clock size={18} className="text-[#FF8C00] mt-0.5 flex-shrink-0" />
+                <span className="text-slate-400">Martes-Jueves: 19:00-20:30</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social Media */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">Síguenos</h4>
+            <div className="flex space-x-4">
+              <a
+                href="https://www.instagram.com/riva_park/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#FF8C00] hover:text-white transition-all duration-300 hover:scale-110"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
             </div>
-        </footer>
-    );
-}
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-12 pt-8 border-t border-slate-800 text-center">
+          <p className="text-slate-500 text-sm">
+            © {currentYear} Escuela Rivapark. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

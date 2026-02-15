@@ -1,4 +1,4 @@
-import heroImage from "../../assets/images/niños-skate.jpg"; // cambia por tu imagen
+import heroImage from "../../assets/images/escuela6.jpeg"; // cambia por tu imagen
 
 export default function Hero() {
   return (
@@ -27,18 +27,12 @@ export default function Hero() {
 
         <div className="mt-8 flex justify-center gap-4 flex-wrap">
           <a
-            href="#clases"
+            href="/clases"
             className="bg-primary hover:bg-primaryDark text-white px-8 py-3 rounded-full font-semibold transition duration-300 shadow-lg"
           >
             Ver Clases
           </a>
 
-          <a
-            href="#contacto"
-            className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300"
-          >
-            Contactar
-          </a>
         </div>
       </div>
     </section>
