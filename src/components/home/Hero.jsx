@@ -1,4 +1,5 @@
 import heroImage from "../../assets/images/escuela6.jpeg"; // cambia por tu imagen
+import { NavLink } from "react-router-dom";
 
 export default function Hero() {
   return (
