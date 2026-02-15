@@ -26,12 +26,12 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 flex justify-center gap-4 flex-wrap">
-          <a
-            href="/clases"
+          <NavLink
+            to="/clases"
             className="bg-primary hover:bg-primaryDark text-white px-8 py-3 rounded-full font-semibold transition duration-300 shadow-lg"
           >
             Ver Clases
-          </a>
+          </NavLink>
 
         </div>
       </div>
