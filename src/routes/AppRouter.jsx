@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Courses from "../pages/Courses";
 import Layout from "../components/layout/Layout";
 import Gallery from "../pages/Gallery";
+import Inscripcion from "../pages/Inscripcion";
 
 export default function AppRouter() {
   return (
@@ -12,6 +13,7 @@ export default function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path='/clases' element={<Courses />} />
         <Route path='/galeria' element={<Gallery />} />
+        <Route path='/inscribirse' element={<Inscripcion />} />
         </Route>
 
       </Routes>

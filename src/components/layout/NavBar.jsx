@@ -53,7 +53,6 @@ const NavBar = () => {
 
                 <NavLink className="bg-primary text-light px-4 rounded-md hover:bg-primaryDark transition-colors duration-200 hidden md:flex ml-auto"
                     to="/inscribirse"
-                    onClick={(e)=>e.preventDefault()}
                 >Inscribirse</NavLink>
 
             </div>
