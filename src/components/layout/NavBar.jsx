@@ -87,10 +87,6 @@ const NavBar = () => {
 
                     <NavLink className="bg-primary text-light px-4 rounded-md hover:bg-primaryDark transition-colors duration-200"
                         to="/inscribirse"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            setOpen(false);
-                        }}
                     >Inscribirse</NavLink>
 
                 </div>
